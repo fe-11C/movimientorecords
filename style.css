@@ -570,3 +570,154 @@ footer span {
         transform: translateX(-50%);
     }
 }
+/* ====== EFECTE SPECIALE PAGINA CRĂCIUN & REVELION ====== */
+
+/* fundal ușor diferit pentru pagina festivă */
+.holiday-body {
+    background:
+        radial-gradient(circle at top, #301637 0%, #050507 40%, #000000 100%),
+        radial-gradient(circle at bottom, rgba(244,176,42,0.15), transparent 60%);
+}
+
+/* ------------- FULGI DE ZĂPADĂ ------------- */
+
+.snow-layer {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 80;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: #ffffff;
+    opacity: 0.9;
+    font-size: 0.8rem;
+    animation-name: snow-fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* poziții, viteze și întârzieri diferite pentru fiecare fulg */
+.snowflake:nth-child(1)  { left: 5%;  animation-duration: 12s; animation-delay: 0s;  font-size: 0.9rem; }
+.snowflake:nth-child(2)  { left: 12%; animation-duration: 14s; animation-delay: 2s;  font-size: 0.7rem; }
+.snowflake:nth-child(3)  { left: 18%; animation-duration: 10s; animation-delay: 1s;  font-size: 1rem; }
+.snowflake:nth-child(4)  { left: 25%; animation-duration: 16s; animation-delay: 3s;  font-size: 0.8rem; }
+.snowflake:nth-child(5)  { left: 32%; animation-duration: 13s; animation-delay: 1.5s;font-size: 1.1rem; }
+.snowflake:nth-child(6)  { left: 40%; animation-duration: 11s; animation-delay: 0.5s;font-size: 0.75rem;}
+.snowflake:nth-child(7)  { left: 48%; animation-duration: 15s; animation-delay: 2.5s;font-size: 0.95rem;}
+.snowflake:nth-child(8)  { left: 56%; animation-duration: 12s; animation-delay: 4s;  font-size: 0.85rem;}
+.snowflake:nth-child(9)  { left: 64%; animation-duration: 18s; animation-delay: 1.2s;font-size: 1rem; }
+.snowflake:nth-child(10) { left: 72%; animation-duration: 14s; animation-delay: 3.3s;font-size: 0.9rem; }
+.snowflake:nth-child(11) { left: 80%; animation-duration: 16s; animation-delay: 0.8s;font-size: 0.8rem; }
+.snowflake:nth-child(12) { left: 88%; animation-duration: 19s; animation-delay: 2.8s;font-size: 1.1rem;}
+.snowflake:nth-child(13) { left: 15%; animation-duration: 20s; animation-delay: 5s; font-size: 0.8rem; }
+.snowflake:nth-child(14) { left: 35%; animation-duration: 17s; animation-delay: 4s; font-size: 1.05rem;}
+.snowflake:nth-child(15) { left: 55%; animation-duration: 13s; animation-delay: 5.3s;font-size: 0.9rem; }
+.snowflake:nth-child(16) { left: 75%; animation-duration: 11s; animation-delay: 3.8s;font-size: 0.8rem; }
+.snowflake:nth-child(17) { left: 90%; animation-duration: 22s; animation-delay: 1.8s;font-size: 1rem;  }
+.snowflake:nth-child(18) { left: 8%;  animation-duration: 18s; animation-delay: 6s; font-size: 0.85rem;}
+.snowflake:nth-child(19) { left: 28%; animation-duration: 15s; animation-delay: 6.8s;font-size: 0.95rem;}
+.snowflake:nth-child(20) { left: 60%; animation-duration: 19s; animation-delay: 4.9s;font-size: 0.9rem; }
+
+@keyframes snow-fall {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(60vh) translateX(15px);
+    }
+    100% {
+        transform: translateY(110vh) translateX(-15px);
+        opacity: 0;
+    }
+}
+
+/* ------------- INSTALAȚIE DE LUMINI ------------- */
+
+.hero-holiday {
+    position: relative;
+    overflow: visible;
+}
+
+.light-garland {
+    position: absolute;
+    top: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6%;
+    z-index: 70;
+    pointer-events: none;
+}
+
+.light-garland::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 999px;
+}
+
+.bulb {
+    position: relative;
+    width: 14px;
+    height: 22px;
+    border-radius: 50% 50% 60% 60%;
+    box-shadow: 0 0 8px rgba(255,255,255,0.6);
+    animation: bulb-blink 1.6s infinite alternate;
+}
+
+.bulb::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 4px;
+    border-radius: 2px;
+    background: #444;
+}
+
+/* culori pentru becuri */
+.bulb-red    { background: #ff4b6e; box-shadow: 0 0 12px rgba(255,75,110,0.9); }
+.bulb-green  { background: #7df7c2; box-shadow: 0 0 12px rgba(125,247,194,0.9); }
+.bulb-gold   { background: #f4b02a; box-shadow: 0 0 12px rgba(244,176,42,0.9); }
+.bulb-blue   { background: #5bc0ff; box-shadow: 0 0 12px rgba(91,192,255,0.9); }
+
+/* ușoare diferențe de timp ca să clipească „dezordonat” */
+.bulb:nth-child(1)  { animation-delay: 0s; }
+.bulb:nth-child(2)  { animation-delay: 0.3s; }
+.bulb:nth-child(3)  { animation-delay: 0.6s; }
+.bulb:nth-child(4)  { animation-delay: 0.9s; }
+.bulb:nth-child(5)  { animation-delay: 1.2s; }
+.bulb:nth-child(6)  { animation-delay: 1.5s; }
+.bulb:nth-child(7)  { animation-delay: 0.45s;}
+.bulb:nth-child(8)  { animation-delay: 0.75s;}
+.bulb:nth-child(9)  { animation-delay: 1.05s;}
+.bulb:nth-child(10) { animation-delay: 1.35s;}
+
+@keyframes bulb-blink {
+    0% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(4px);
+    }
+}
+
