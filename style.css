@@ -860,4 +860,72 @@ footer span {
     transform: translateX(3px);
 }
 
+.location-card {
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--border-soft);
+}
+
+.location-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 20%, var(--accent-gold), var(--accent-pink));
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+}
+
+.location-pin {
+    position: relative;
+    width: 18px;
+    height: 24px;
+    border-radius: 50% 50% 60% 60%;
+    background: #050507;
+    border: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-pin-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--accent-gold);
+}
+
+.location-text {
+    font-size: 0.86rem;
+}
+
+.location-title {
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+
+.location-address {
+    color: var(--text-muted);
+}
+
+.location-link {
+    display: inline-block;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-gold);
+}
+
+.location-link:hover {
+    color: var(--accent-pink);
+}
+
+
 
